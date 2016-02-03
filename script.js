@@ -30,7 +30,7 @@ function Domobj () {
 
     $("#content").empty();
 
-    for(i = 0; i < self.products.length; i++) {
+    for (i = 0; i < self.products.length; i++) {
       if (i % 3 == 0) {
         thishtml += "<div class='row'>";
       }
@@ -69,8 +69,16 @@ function Productobj (product, i) {
   }
 }
 
-
 var page = new Domobj();
 page.getproducts("data.json", function () {
   page.updateproducthtml();
 })
+
+// ==== Modification on this file ====
+// Fixed code by folowwing jshint style guide
+// Capitalizes class name domobj => Domobj
+// Capitalizes class name productobj => Productobj
+// made page.getproducts asynch function with a callback
+// which ten calls page.updateproducthtml() after the callback
+// page.updateproducthtml() calls page.updatedom()
+// page.updatedom() appends content every row instead of appending everything at once

@@ -86,6 +86,7 @@ a {
   font-size: 16px;
 }
 
+/*This is the media query style rule for small viewport*/
 @media only screen and (max-device-width: 480px) {
   h1.title, .title {
     font-size:60px;
