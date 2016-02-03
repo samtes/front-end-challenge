@@ -10,7 +10,6 @@ function Domobj () {
       for(i = 0; i < response.sales.length; i++) {
         self.products.push(new Productobj(response.sales[i], i));
       }
-
       cb();
     });
   }
@@ -23,7 +22,7 @@ function Domobj () {
     }
     setTimeout(function () {
       self.updatedom();
-    }, 1000)
+    }, 5000)
   }
 
   self.updatedom = function () {
