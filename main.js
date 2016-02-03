@@ -8,17 +8,14 @@
   }
 
   function removeProduct () {
-    console.log("removing ...");
-    $(this).parent(".product-container").hide();
+    $(this).parent(".product-container").fadeOut();
   }
 
   function showOverlay () {
-    console.log("displaying overlay ....");
     $(this).find(".overlay").fadeIn();
   }
 
   function hideOverlay () {
-    console.log("hiding overlay ....");
     $(this).find(".overlay").fadeOut();
   }
 
