@@ -59,7 +59,12 @@ function Productobj (product, i) {
 
   self.updatehtml = function () {
     $.get("product-template.html", function (template) {
-      self.htmlview = template.replace("{image}", self.photo).replace("{title}", self.title).replace("{description}", self.description).replace("{tagline}", self.tagline).replace("{tagline}", self.tagline).replace("{url}", self.url).replace("{custom_class}", self.custom_class);
+      self.htmlview = template.replace("{image}", self.photo)
+      .replace("{title}", self.title)
+      .replace("{description}", self.description)
+      .replace("{tagline}", self.tagline)
+      .replace("{url}", self.url)
+      .replace("{custom_class}", self.custom_class);
     });
   }
 }

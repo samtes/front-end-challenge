@@ -87,6 +87,12 @@ a {
 }
 
 @media only screen and (max-device-width: 480px) {
+  h1.title, .title {
+    font-size:60px;
+  }
+  .product-container .tagline, .tagline {
+    font-size: 40px;
+  }
   .product-container {
     width: 90%;
   }
