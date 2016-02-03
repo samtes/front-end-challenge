@@ -1,3 +1,4 @@
+
 body {
   font-family: "Arial";
   text-align: center;
@@ -83,4 +84,16 @@ a {
   overflow: hidden;
   text-overflow: ellipsis;
   font-size: 16px;
+}
+
+@media only screen and (max-device-width: 480px) {
+  .product-container {
+    width: 90%;
+  }
+  .row {
+    width:100%;
+  }
+  .col1, .col2, .col3 {
+    float: none;
+  }
 }
