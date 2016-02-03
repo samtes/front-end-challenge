@@ -1,9 +1,13 @@
 <div class="product-container {custom_class}">
+  <div class="close">x</div>
   <a href="{url}">
     <img src="{image}">
     <div class="description">
+      <div class="overlay">
+        <p>{description}</p>
+      </div>
       <div class="title">{title}</div>
-      <div class="tagline">{tagline}</div>
+      <div class="tagline"  title="{tagline}">{tagline}</div>
     </div>
   </a>
 </div>

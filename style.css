@@ -1,13 +1,86 @@
-body{font-family: "Arial"}
-a{text-decoration: none;}
-
-.product-container{width:300px; border:1px solid #aaa; margin:10px; display:inline-block;}
-.product-container img{width:100%; height:auto;}
-.row{width:946px;}
-
-.col1{float:left;}
-.col2{margin:10px auto;}
-.col3{float:right;}
-
-.title{font-size:20px;}
-.description{padding:10px;}
+body {
+  font-family: "Arial";
+  text-align: center;
+  cursor: pointer;
+}
+.spinner {
+  margin: 180px auto;
+}
+#container {
+  margin: auto;
+}
+h1.title {
+  font-size:36px;
+}
+.tagline {
+  font-size: 18px;
+}
+a {
+  text-decoration: none;
+  color: #0096ff
+}
+.product-container {
+  position: relative;
+  width:300px;
+  border:1px solid #aaa;
+  margin:10px;
+  display:inline-block;
+}
+.product-container img {
+  width:100%;
+  height:auto;
+}
+.row {
+  width:946px;
+  margin: auto;
+}
+.col1 {
+  float:left;
+}
+.col2 {
+  margin:10px auto;
+}
+.col3 {
+  float:right;
+}
+.title {
+  font-size:20px;
+}
+.description {
+  padding:10px;
+}
+.overlay {
+  overflow-y: scroll;
+  height:100%;
+  display: none;
+  color: white;
+  position:absolute;
+  top:0;
+  bottom:0;
+  right:0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.85);
+}
+.close {
+  padding-right: 10px;
+  text-align: right;
+}
+.close:hover {
+  font-weight: bold;
+}
+.right {
+  padding-right: 10px;
+}
+.description p {
+  text-align:justify;
+  padding:0 15px;
+  text-justify:inter-word;
+  font-size:15px;
+}
+.product-container .tagline {
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 16px;
+}
