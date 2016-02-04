@@ -21,6 +21,7 @@
 
 })();
 
+// ====== comments ======
 // Created this file to handle the front-end functionalities
 // Hnadles mouseover overlay display
 // Handles remove product from display

@@ -7,7 +7,7 @@ function Domobj () {
     $.getJSON(url, function (response) {
       var counter = response.sales.length;
 
-      for(i = 0; i < response.sales.length; i++) {
+      for (i = 0; i < response.sales.length; i++) {
         self.products.push(new Productobj(response.sales[i], i));
       }
       cb();
@@ -17,7 +17,7 @@ function Domobj () {
   self.updateproducthtml = function () {
     var counter = self.products.length;
 
-    for(i = 0; i < self.products.length; i++) {
+    for (i = 0; i < self.products.length; i++) {
       self.products[i].updatehtml();
     }
     setTimeout(function () {
@@ -28,6 +28,7 @@ function Domobj () {
   self.updatedom = function () {
     var thishtml = "";
 
+    // remove the loading indicator before starting to append products
     $("#content").empty();
 
     for (i = 0; i < self.products.length; i++) {
@@ -37,7 +38,7 @@ function Domobj () {
 
       thishtml += self.products[i].htmlview;
 
-      if ((i % 3 == 2) || i == (self.products.length -1) ) {
+      if ((i % 3 == 2) || i == (self.products.length - 1)) {
         thishtml += "</div>";
         $("#content").append(thishtml);
         thishtml = "";
@@ -72,13 +73,13 @@ function Productobj (product, i) {
 var page = new Domobj();
 page.getproducts("data.json", function () {
   page.updateproducthtml();
-})
+});
 
 // ==== Modification on this file ====
-// Fixed code by folowwing jshint style guide
+// Fixed code by following jshint style guide
 // Capitalizes class name domobj => Domobj
 // Capitalizes class name productobj => Productobj
 // made page.getproducts asynch function with a callback
-// which ten calls page.updateproducthtml() after the callback
+// which then calls page.updateproducthtml() after the callback
 // page.updateproducthtml() calls page.updatedom()
 // page.updatedom() appends content every row instead of appending everything at once
