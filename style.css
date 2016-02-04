@@ -103,4 +103,11 @@ a {
   .col1, .col2, .col3 {
     float: none;
   }
+  .spinner {
+    margin: 480px auto;
+    width: 150px;
+  }
+  #content > p {
+    font-size: 46px;
+  }
 }
